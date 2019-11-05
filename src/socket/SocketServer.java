@@ -1,5 +1,6 @@
 package socket;
 
+import ui.ServerFrame;
 import java.io.*;
 import java.net.*;
 
@@ -86,7 +87,7 @@ public class SocketServer implements Runnable {
 	try{  
 	    server = new ServerSocket(port);
             port = server.getLocalPort();
-	    ui.jTextArea1.append("Server startet. IP : " + InetAddress.getLocalHost() + ", Port : " + server.getLocalPort());
+	    ui.jTextArea1.append("Server started - IP : " + InetAddress.getLocalHost() + ", Port : " + server.getLocalPort());
 	    start(); 
         }
 	catch(IOException ioe){  
@@ -105,7 +106,7 @@ public class SocketServer implements Runnable {
 	try{  
 	    server = new ServerSocket(port);
             port = server.getLocalPort();
-	    ui.jTextArea1.append("Server startet. IP : " + InetAddress.getLocalHost() + ", Port : " + server.getLocalPort());
+	    ui.jTextArea1.append("Server started. IP : " + InetAddress.getLocalHost() + ", Port : " + server.getLocalPort());
 	    start(); 
         }
 	catch(IOException ioe){  
